@@ -10,11 +10,10 @@ public class CliOptionProvider {
     private Options options;
     private CommandLine commandLine;
 
-//    TODO write better descriptions
 //    Create the option objects, so changing names etc will only be necessary in this place
-    private static final Option helpOption = new Option("h", "help", false, "Prints help message");
-    private static final Option instanceOption = new Option("i", "instance", true, "Instance to classify");
-    private static final Option fileOption = new Option("f", "file", true, "File location with instances to classify");
+    private static final Option helpOption = new Option("h", "help", false, "Prints the help message");
+    private static final Option instanceOption = new Option("i", "instance", true, "Classify a single instance. <arg> has to be formatted as follows: 1,2,3,4,5,6,7,8,9 where the numbers are the attribute values of the instance. When missing a number simply omit that number (but leave the comma!!) and surround it with quotation marks (e.g. \"1,2,3,4,,6,,,9\"). For more information on the meaning of the attribute values please see the README.md file belonging to this application.");
+    private static final Option fileOption = new Option("f", "file", true, "Classify instances from a file location. <arg> has to be the location of an ARFF file with the instances to classify. The classified instances will be saved in a new ARFF file that can be found in the output_data folder after running this command. (For an exact explanation of how this arff file should be formatted please see the README.md file belonging to this application.)");
 
     private boolean helpRequested = false;
     private InputType inputType = InputType.NONE;
@@ -129,9 +128,8 @@ public class CliOptionProvider {
      * Prints help message
      */
     public void printHelp() {
-//        TODO write better help
         HelpFormatter formatter = new HelpFormatter();
-        formatter.printHelp("java wrapper\n", this.options);
+        formatter.printHelp("Java Wrapper Breast Cancer Classifier\n", this.options);
     }
 
 }

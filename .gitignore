@@ -9,3 +9,5 @@ CLIdemo.iml
 *.class
 *.log
 *.jar
+
+!java_wrapper_weka_classifier.jar

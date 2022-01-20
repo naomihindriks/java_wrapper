@@ -19,11 +19,10 @@ dependencies {
 }
 
 task fatJar(type: Jar) {
-    duplicatesStrategy "include"
+    duplicatesStrategy "exclude"
     manifest {
         attributes 'Main-Class': 'nl.bioinf.java_wrapper.ApplicationRunner'
     }
-//    archiveClassifier = "all"
     from {
         configurations.runtimeClasspath.findAll { !it.path.endsWith(".pom") }.collect {
             it.isDirectory() ? it : zipTree(it)
