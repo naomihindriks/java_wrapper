@@ -1,0 +1,11 @@
+.gradle
+/build/
+/.idea
+/gradle
+gradlew
+gradlew.bat
+CLIdemo.iml
+
+*.class
+*.log
+*.jar

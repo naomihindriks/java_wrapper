@@ -1,0 +1,12 @@
+@relation Filtered.Breast.Cancer.Wisconsin..Original..Data.Set
+@attribute clump.thick numeric
+@attribute uni.cell.size numeric
+@attribute uni.cell.shape numeric
+@attribute marg.adhesion numeric
+@attribute single.epith.cell.size numeric
+@attribute bare.nuclei numeric
+@attribute bland.chrom numeric
+@attribute norm.nucleoli numeric
+@attribute mitoses numeric
+@attribute class {'Malignant','Benign'}
+@data
